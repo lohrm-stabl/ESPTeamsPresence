@@ -279,10 +279,10 @@ void setPresenceAnimation() {
 		setAnimation(0, FX_MODE_STATIC, ORANGE);
 	}
 	if (activity.equals("Busy")) {
-		setAnimation(0, FX_MODE_STATIC, PURPLE);
+		setAnimation(0, FX_MODE_STATIC, RED);
 	}
 	if (activity.equals("DoNotDisturb") || activity.equals("UrgentInterruptionsOnly")) {
-		setAnimation(0, FX_MODE_STATIC, PINK);
+		setAnimation(0, FX_MODE_STATIC, RED);
 	}
 	if (activity.equals("InACall")) {
 		setAnimation(0, FX_MODE_BREATH, RED);
@@ -297,7 +297,7 @@ void setPresenceAnimation() {
 		setAnimation(0, FX_MODE_SCAN, RED);
 	}	
 	if (activity.equals("Offline") || activity.equals("OffWork") || activity.equals("OutOfOffice") || activity.equals("PresenceUnknown")) {
-		setAnimation(0, FX_MODE_STATIC, BLACK);
+		setAnimation(0, FX_MODE_STATIC, PURPLE);
 	}
 	if (activity.equals("Presenting")) {
 		setAnimation(0, FX_MODE_COLOR_WIPE, RED);
