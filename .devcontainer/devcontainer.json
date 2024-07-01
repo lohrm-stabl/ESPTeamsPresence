@@ -1,0 +1,31 @@
+{
+	"name": "PlatformIO (Community)",
+	"build": {
+		"dockerfile": "Dockerfile",
+		"context": "."
+	},
+	"customizations": {
+		"vscode": {
+			"settings": {
+				"terminal.integrated.defaultProfile.linux": "zsh"
+			},
+			"extensions": [
+				"ms-vscode.cpptools",
+				"platformio.platformio-ide"
+			]
+		}
+	},
+	"forwardPorts": [
+		8008
+	],
+	"mounts": [
+		"type=bind,source=/dev/,target=/dev/"
+	],
+	"runArgs": [
+		// major number 188 are USB serial converters (/dev/ttyUSB0, etc.)
+		// see https://www.kernel.org/doc/html/latest/admin-guide/devices.html
+		"--device-cgroup-rule=c 188:* rmw"
+	],
+	"features": {},
+	"postAttachCommand": "sudo service udev restart"
+}
